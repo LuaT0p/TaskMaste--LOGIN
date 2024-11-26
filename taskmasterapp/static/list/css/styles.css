@@ -1,0 +1,121 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
+              justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(18, 18, 18, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input input,
+#task-input select,
+#task-input button {
+    font-size: 1rem;
+    border: 1px solid black;
+    padding: 0.8rem;
+    background: #2d2d2d;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+#task-input button {
+    background: #ff9900;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#task-input button:hover {
+    background: linear-gradient(to right, #d58000, #d20065);
+}
+
+#show-tasks {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #ff007a, #ff9900);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+#show-tasks:hover {
+    background-color: #d20065;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #ff007a;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d20065;
+}
