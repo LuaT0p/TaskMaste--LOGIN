@@ -1,16 +1,14 @@
-
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
-              justify-content: center;
+    justify-content: center;
+    display: flex;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -29,40 +27,66 @@ header h1 {
     text-align: center;
     color: white;
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 50px;
 }
 
-#task-input {
+h2 {
+    text-align: center;
+    padding: 20px;
+    display: inline;
+}
+
+
+.listas {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%; /* Ajuste a largura da área para um layout mais equilibrado */
 }
 
-#task-input input,
-#task-input select,
-#task-input button {
-    font-size: 1rem;
-    border: 1px solid black;
-    padding: 0.8rem;
-    background: #2d2d2d;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    color: #fff;
-    outline: none;
-    transition: border 0.3s ease;
+.lista-item x{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-#task-input button {
-    background: #ff9900;
-    color: white;
-    cursor: pointer;
-    border: none;
+h2 {
+    margin-bottom: 10px; /* Espaço entre o título e a lista */
 }
 
-#task-input button:hover {
-    background: linear-gradient(to right, #d58000, #d20065);
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
+ul li {
+    margin-bottom: 8px; /* Espaço entre os itens das listas */
+}
+
+.baixa, .media, .alta {
+    width: 100px; /* Largura das listas */
+    padding: 20px;
+}
+
+ul{
+    list-style: none;
+}
+.item{
+    position: relative;
+    margin: 10px 0px;
+}
+
+.lists {
+    padding: 50px;
+}
+
+
+  
 #show-tasks {
     width: 100%;
     padding: 0.8rem;
@@ -92,30 +116,4 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.task-item button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.edit-btn {
-    background-color: #ffc107;
-    color: white;
-}
-
-.edit-btn:hover {
-    background-color: #e0a800;
-}
-
-.delete-btn {
-    background-color: #ff007a;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: #d20065;
 }

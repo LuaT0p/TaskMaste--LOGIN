@@ -1,12 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../static/home/css/systen.css">
+  <link rel="stylesheet" href="{% static 'registro/css/systenregistro.css' %}">
   <link rel="stylesheet" href="systen.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/planning-4462182-3698337.png?f=webp&w=256">
+  <link rel="icon" href="https://cdn-icons-png.freepik.com/512/5656/5656188.png">
   <title>TaskMaster - Cadastro</title>
 </head>
 <body>
@@ -14,10 +16,14 @@
      <div class="login-box">
       <h1>TaskMaster</h1>
       <center>
-      <img style="width: 25%;" src="https://cdn.iconscout.com/icon/free/png-256/free-task-list-icon-download-in-svg-png-gif-file-formats--to-do-planner-checklist-planning-care-and-organization-pack-business-icons-3698174.png?f=webp&w=256" alt="Icone de uma lista de tarefas">
+      <img style="width: 20%;" src="https://cdn.iconscout.com/icon/free/png-256/free-task-list-icon-download-in-svg-png-gif-file-formats--to-do-planner-checklist-planning-care-and-organization-pack-business-icons-3698174.png?f=webp&w=256" alt="Icone de uma lista de tarefas">
      </center>
-      <h2>Faça seu Cadastro<span class="dot">.</span></h2>
+      <h2>Crie sua conta<span class="dot">.</span></h2>
       <form>
+        <div class="input-group">
+          <label for="email">Nome de usuario</label>
+          <input type="email" id="email" placeholder="Digite seu usuario">
+        </div>
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Digite seu email">
@@ -25,6 +31,10 @@
         <div class="input-group">
           <label for="password">Senha</label>
           <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <div class="input-group">
+          <label for="password">Confirme sua senha</label>
+          <input type="password" id="password" placeholder="Confirme sua senha">
         </div>
         
         <button type="submit" class="btn">Entrar</button>

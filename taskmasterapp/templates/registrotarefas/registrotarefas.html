@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'registrotarefas/stylergst.css' %}">
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/512/5656/5656188.png">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tarefas Adicionadas</h1>
+        </header>
+
+        <center>
+        <h3>Importancia da tarefa:</h3>
+        </center>
+
+<div class="listas">
+    <div class="lista-item">
+        <h2 class="alta">Alta</h2>
+        <ul class="alta">
+            <input type="checkbox" class="list"><label for class="list">tarefa 1 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 2 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 3 </label> <br>
+        </ul>
+    </div>
+
+    <div class="lista-item">
+        <h2 class="media">Média</h2>
+        <ul class="media">
+            <input type="checkbox" class="list"><label for class="list">tarefa 1 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 2 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 3 </label> <br>
+        </ul>
+    </div>
+
+    <div class="lista-item">
+        <h2 class="baixa">Baixa</h2>
+        <ul class="baixa">
+            
+            <input type="checkbox" class="list"><label for class="list">tarefa 1 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 2 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 3 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 4 </label> <br>
+            <input type="checkbox" class="list"><label for class="list">tarefa 5 </label> <br>
+            
+        </ul>
+    </div>
+</div>
+
+
+        <button id="show-tasks">Adicionar Tarefas</button>
+        <ul id="task-list" style="display: none;"></ul>
+    </div>
+</body>
+</html>
