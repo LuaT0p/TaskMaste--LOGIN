@@ -10,11 +10,10 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
     color: #fff;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    overflow:auto;
     margin: 0;
   }
   
@@ -30,8 +29,10 @@
   }
   
   .login-container {
+    margin: 30px;
     width: 80%;
-    max-width: 400px;
+    height: 85%;
+    max-width: 600px;
     background: rgba(18, 18, 18, 0.9);
     border-radius: 15px;
     padding: 2rem;

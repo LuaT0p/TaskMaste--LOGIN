@@ -14,21 +14,31 @@
      <div class="login-box">
       <h1> <span class="dot">◦  </span> TaskMaster <span class="dot">  ◦</span> </h1>
       <center>
-      <img style="width: 25%;" src="https://cdn.iconscout.com/icon/free/png-256/free-task-list-icon-download-in-svg-png-gif-file-formats--to-do-planner-checklist-planning-care-and-organization-pack-business-icons-3698174.png?f=webp&w=256" alt="Icone de uma lista de tarefas">
+      <img style="width: 20%;" src="https://cdn.iconscout.com/icon/free/png-256/free-task-list-icon-download-in-svg-png-gif-file-formats--to-do-planner-checklist-planning-care-and-organization-pack-business-icons-3698174.png?f=webp&w=256" alt="Icone de uma lista de tarefas">
      </center>
       <h2>Faça seu login<span class="dot">.</span></h2>
-      <form>
+
+      {% if form.non_field_errors %}
+      <div class="error-messages">
+        {% for error in form.non_field_errors %}
+        <p>{{error}}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
         <div class="input-group">
-          <label for="email">Email/Usuario</label>
-          <input type="email" id="email" placeholder="Digite seu email ou nome de usuario">
+          <label for="username">Email/Usuario</label>
+          <input type="username" name="username" id="username" placeholder="Digite seu email ou nome de usuario">
         </div>
         <div class="input-group">
           <label for="password">Senha</label>
-          <input type="password" id="password" placeholder="Digite sua senha">
+          <input type="password" name="password" id="password" placeholder="Digite sua senha">
         </div>
         <a href="#" class="forgot-password">Esqueci a minha senha</a>
-      <button type="submit" class="btn">Entrar</button>
-        <a href="Cadastrar.html" class="signup">Ainda não tenho uma conta</a>
+        <button type="submit" class="btn">Entrar</button>
+        <a href="{% url 'cadastrar' %}" class="signup">Ainda não tenho uma conta</a>
       </form>
     </div>
   </div>
