@@ -6,7 +6,7 @@ urlpatterns = [
 
     path('list/', views.TaskList_view, name='list'),
 
-    path('registro/', views.registro_view, name='cadastrar'),
+    path('registro/', views.registro_view, name='registro'),
 
     path('tarefas/', views.registrotarefas_view, name='tarefas'),
 ]

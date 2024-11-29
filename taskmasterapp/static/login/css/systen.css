@@ -13,6 +13,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    
     overflow:auto;
     margin: 0;
   }
@@ -29,9 +30,9 @@
   }
   
   .login-container {
-    margin: 50px;
-    width: 80%px;
-    height: 85%;
+    margin: 30px;
+    width: 90%;
+   
     max-width: 600px;
     background: rgba(18, 18, 18, 0.9);
     border-radius: 15px;
@@ -47,7 +48,7 @@
 
   .login-box h2 {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
   
@@ -125,4 +126,37 @@
   .signup:hover {
     color: #ff007a;
   }
+
+  .message {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .message-success {
+    background-color: white;
+    color: green;
+    border: 1px solid white;
+  }
+
+  .message-error {
+    background-color: white;
+    color: red;
+    border: 1px solid white;
+  }
   
+
+  .message-info {
+    background-color: white;
+    color: green;
+    border: 1px solid white;
+  }
+
+  .message-warning {
+    background-color: white;
+    color: orange;
+    border: 1px solid white;
+  }

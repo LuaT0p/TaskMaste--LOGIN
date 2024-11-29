@@ -60,13 +60,13 @@ header h1 {
 }
 
 #task-input button:hover {
-    background: linear-gradient(to right, #ffffff, #000000);
+    background: linear-gradient(to top, #ffffff, #000000);
 }
 
 #show-tasks {
     width: 100%;
     padding: 0.8rem;
-    background: linear-gradient(to right, #161616, #ff9900);
+    background: linear-gradient(to top, #161616, #ff9900);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -75,7 +75,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 #show-tasks:hover {
-    background-color: #920046;
+    background: linear-gradient(to top, #2d2d2d, #ce7c00);
 }
 
 #task-list {
