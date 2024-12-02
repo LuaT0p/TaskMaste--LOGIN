@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
+from .models import Task
 
 def login_view(request):
     if request.method == "POST":
@@ -19,7 +20,8 @@ def login_view(request):
     return render(request, 'login/index.html')
 
 def TaskList_view(request):
-    return render(request, 'TaskList/tasks.html')
+    tasks = Task.objects.filter(user=request.user)
+    return render(request, "TaskList/tasklist.html", {"tasks": tasks})
 
 def registro_view(request):
     if request.method == "POST":
@@ -43,4 +45,20 @@ def registro_view(request):
     return render(request, 'registro/Cadastrar.html')
 
 def registrotarefas_view(request):
-    return render(request, 'registrotarefas/registrotarefas.html')
+    return render(request, 'TaskRegister/taskregister.html')
+
+def task_register (request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        due_date = request.POST.get("due_date")
+        priority = request.POST.get("priority")
+
+        Task.object.create(
+            user=request.user,
+            title=title,
+            due_date=due_date,
+            priority=priority,
+        )
+
+        return redirect("tarefas/")
+    return render (request, "TaskRegister/taskregister.html")

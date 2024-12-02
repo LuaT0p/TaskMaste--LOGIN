@@ -18,7 +18,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(18, 18, 18, 0.9);
+    background: rgba(18, 18, 18, 0.941);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -53,20 +53,20 @@ header h1 {
 }
 
 #task-input button {
-    background: #000000;
+    background: #4f0026a8;
     color: white;
     cursor: pointer;
     border: none;
 }
 
 #task-input button:hover {
-    background: linear-gradient(to top, #ffffff, #000000);
+    background: linear-gradient(to top, #500027, #940047);
 }
 
 #show-tasks {
     width: 100%;
     padding: 0.8rem;
-    background: linear-gradient(to top, #161616, #ff9900);
+    background: linear-gradient(to top, #291900, #120b00);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -75,7 +75,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 #show-tasks:hover {
-    background: linear-gradient(to top, #2d2d2d, #ce7c00);
+    background: linear-gradient(to top, #342000, #120b00);
 }
 
 #task-list {

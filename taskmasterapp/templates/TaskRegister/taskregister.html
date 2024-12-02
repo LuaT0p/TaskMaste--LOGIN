@@ -16,19 +16,20 @@
             <h1>Minha Lista de Tarefas</h1>
         </header>
         <div id="task-input">
-            <input type="text" id="task-text" placeholder="Digite sua tarefa">
-            <input type="date" id="task-date">
-            <select id="task-priority">
+            <form method="POST" action="{% url 'tarefas' %}">
+            {% csrf_token %}
+            <input type="text" name="title" id="task-text" placeholder="Digite sua tarefa" required>
+            <input type="date" name="due_date" id="task-date" required>
+            <select name="priority" id="task-priority">
                 <option value="Baixa">Baixa</option>
                 <option value="Média">Média</option>
                 <option value="Alta">Alta</option>
             </select>
-            <button class="add-task">Adicionar Tarefa</button>
+            <button type="submit" class="add-task">Adicionar Tarefa</button>
+            </form>
         </div>
-        <a href="{% url 'tarefas' %}"><button id="show-tasks">Tarefas Adicionadas</button></a>
+        <button id="show-tasks">Tarefas Adicionadas</button></a>
         <ul id="task-list" style="display: none;"></ul>
     </div>
-
-    <script src="{% static 'scriptjs/script.js' %}"></script>
 </body>
 </html>
