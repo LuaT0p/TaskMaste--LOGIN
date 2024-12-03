@@ -12,18 +12,16 @@
 <body>
     <div class="container">
             <h1>Tarefas Adicionadas</h1>
-        <ul>
-            {% for task in tasks %}
-            <li>
-                <strong>
-                    {{ task.title }}</strong> - {{ task.due_date }} - {{ task.priority }}
+            <ul>
+                {% for task in tasks %}
+                <li>
+                    <strong>{{ task.title }}</strong> - {{ task.due_date }} - {{ task.priority }}
                 </li>
                 {% empty %}
-                <p >Você ainda não possui tarefas.</p>
+                <p>Você ainda não possui tarefas cadastradas.</p>
                 {% endfor %}
-        </ul>
+            </ul>
 <button id="show-tasks">Adicionar Tarefas</button>
-        <ul id="task-list" style="display: none;"></ul>
     </div>
 </body>
 </html>

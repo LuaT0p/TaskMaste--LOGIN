@@ -5,7 +5,7 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = ['title', 'due_date', 'priority']
-        widgets ={
+        widgets = {
             'due_date': forms.DateInput(attrs={'type': 'date'}),
             'priority': forms.Select(),
         }

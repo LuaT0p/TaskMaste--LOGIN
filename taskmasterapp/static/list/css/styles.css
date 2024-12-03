@@ -7,13 +7,12 @@ body {
     color: #333;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
-              justify-content: center;
+    justify-content: center;        
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
 }
-
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -53,20 +52,22 @@ header h1 {
 }
 
 #task-input button {
-    background: #4f0026a8;
+    text-align: center;
+    width: 90px;
+    background: #000000a8;
     color: white;
     cursor: pointer;
     border: none;
 }
 
 #task-input button:hover {
-    background: linear-gradient(to top, #500027, #940047);
+    background: linear-gradient(to bottom, #000000, #290014);
 }
 
 #show-tasks {
     width: 100%;
     padding: 0.8rem;
-    background: linear-gradient(to top, #291900, #120b00);
+    background: linear-gradient(to left, #2e1c00, #000000);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -75,7 +76,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 #show-tasks:hover {
-    background: linear-gradient(to top, #342000, #120b00);
+    background: linear-gradient(to left, #362100, #080808);
 }
 
 #task-list {

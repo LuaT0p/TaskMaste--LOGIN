@@ -8,9 +8,9 @@ class Task(models.Model):
     priority = models.CharField(
         max_length=10,
         choices=[
-            ("Baixa", "Baixa"),
-            ("Média", "Média"),
-            ("Alta", "Alta"),
+            ('Baixa', 'Baixa'),
+            ('Média', 'Média'),
+            ('Alta', 'Alta')
         ]
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks')

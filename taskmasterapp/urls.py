@@ -8,5 +8,5 @@ urlpatterns = [
 
     path('taskregister/', views.registrotarefas_view, name='tasksregister'),
 
-    path('tarefas/', views.TaskList_view, name='tarefas'),
+    path('tarefas/', views.TaskList_view, name='task'),
 ]

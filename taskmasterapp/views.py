@@ -13,15 +13,12 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('list')
+            return redirect('taskregister/')
         else:
-            return render(request, 'login/index.html', {'error':'Credenciais inválidas'})
+            return render(request, 'login/index.html', {'error': 'Credenciais invalidas'})
+    
     
     return render(request, 'login/index.html')
-
-def TaskList_view(request):
-    tasks = Task.objects.filter(user=request.user)
-    return render(request, "TaskList/tasklist.html", {"tasks": tasks})
 
 def registro_view(request):
     if request.method == "POST":
@@ -45,20 +42,23 @@ def registro_view(request):
     return render(request, 'registro/Cadastrar.html')
 
 def registrotarefas_view(request):
-    return render(request, 'TaskRegister/taskregister.html')
-
-def task_register (request):
     if request.method == "POST":
+        # Obtém os dados do formulário
         title = request.POST.get("title")
         due_date = request.POST.get("due_date")
         priority = request.POST.get("priority")
 
-        Task.object.create(
-            user=request.user,
+        # Cria a tarefa e associa ao usuário logado
+        Task.objects.create(
+            user=request.user,  # Associando ao usuário logado
             title=title,
             due_date=due_date,
             priority=priority,
         )
+        
+        return redirect("task")
+    return render(request, "taskregister/taskregister.html")
 
-        return redirect("tarefas/")
-    return render (request, "TaskRegister/taskregister.html")
+def TaskList_view(request):
+    tasks = Task.objects.filter(user=request.user)  # Filtra tarefas do usuário logado
+    return render(request, "task/task.html", {"tasks": tasks})
