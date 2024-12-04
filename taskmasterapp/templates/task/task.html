@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,18 @@
                 {% for task in tasks %}
                 <li>
                     <strong>{{ task.title }}</strong> - {{ task.due_date }} - {{ task.priority }}
+
+                    <div class="btn-container">
+                    <a href="{% url 'edit_task' task.id %}" class="btnedit" class="btn btn-edit">Alterar</a>
+                    <h3>\\</h3>
+                    <a href="{% url 'delete_task' task.id%}" class="btndelete" class="btn btn-delete" onclick="return confirm('Tem certeza que deseja remover essa tarefa?');">Remover</a>
+                    </div>
                 </li>
                 {% empty %}
                 <p>Você ainda não possui tarefas cadastradas.</p>
                 {% endfor %}
             </ul>
-<button id="show-tasks">Adicionar Tarefas</button>
+            <a href="{% url 'tasksregister' %}"><button id="show-tasks">Adicionar Tarefas</button></a>
     </div>
 </body>
 </html>

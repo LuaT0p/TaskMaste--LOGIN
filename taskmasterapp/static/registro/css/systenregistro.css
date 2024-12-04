@@ -8,12 +8,13 @@
   body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
+              url("https://wallup.net/wp-content/uploads/2016/01/302727-landscape.jpg") no-repeat center center/cover;
     color: #fff;
     display: grid;
     justify-content: center;
     align-items: center;
     overflow:auto;
+    min-height: 100vh;
     margin: 0;
   }
   
@@ -33,7 +34,7 @@
     width: 90%;
     
     max-width: 600px;
-    background: rgba(18, 18, 18, 0.941);
+    background: rgba(18, 18, 18, 0.800);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);

@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User
 from .models import Task
+from .forms import TaskForm
 
 def login_view(request):
     if request.method == "POST":
@@ -62,3 +63,19 @@ def registrotarefas_view(request):
 def TaskList_view(request):
     tasks = Task.objects.filter(user=request.user)  # Filtra tarefas do usuário logado
     return render(request, "task/task.html", {"tasks": tasks})
+
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    task.delete()
+    return redirect('task')
+
+def edit_task(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect('task')
+    else:
+        form = TaskForm(instance=task)
+        return render(request, 'taskedit/index.html', {'form': form, 'task': task})

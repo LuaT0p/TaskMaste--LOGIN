@@ -1,0 +1,58 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), 
+              url("https://img.freepik.com/premium-vector/orange-sparkle-black-background-red-flash-highlight-dark-background-vector-illustration_541075-89.jpg") no-repeat center center/cover;
+    justify-content: center;        
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(18, 18, 18, 0.800);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btnsave {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #ff007a, #ff9900);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnsave:hover {
+    transform: scale(1.02);
+  }
+
+.btncancel {
+    font-size: 0.95rem;
+    color: #757575;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.btncancel:hover {
+    color: #ff007a;
+}

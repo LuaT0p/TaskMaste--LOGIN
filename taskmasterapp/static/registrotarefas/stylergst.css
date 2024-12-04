@@ -1,29 +1,33 @@
-body {
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url("https://i.pinimg.com/originals/74/79/77/747977dfedb099d3e9207b1a5bbd8563.jpg") no-repeat center center/cover;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300)), 
+              url("https://img.freepik.com/premium-vector/orange-sparkle-black-background-red-flash-highlight-dark-background-vector-illustration_541075-89.jpg") no-repeat center center/cover;
+              justify-content: center;        
+              align-items: center;
+              min-height: 100vh;
+              overflow: auto;
+              margin: 0;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: #190019;
+    background: rgba(18, 18, 18, 0.800);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     
 }
 
-header h1 {
+h1 {
     text-align: center;
     color: white;
     margin-top: 1.5rem;
@@ -88,6 +92,7 @@ ul{
 
   
 #show-tasks {
+    margin-top: 1.5rem;
     width: 100%;
     padding: 0.8rem;
     background: linear-gradient(to right, #ff007a, #ff9900);
@@ -96,10 +101,10 @@ ul{
     font-size: 1rem;
     color: #fff;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+}
 
 #show-tasks:hover {
-    background-color: #d20065;
+    background: linear-gradient(to right, #cf0064, #ca7900);
 }
 
 #task-list {
@@ -116,4 +121,39 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.btn-container {
+    display: flex;
+    font-size: 1rem;
+    color: #757575;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.btnedit {
+    font-size: 1rem;
+    color: #757575;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.btnedit:hover {
+    color: #ff007a;
+}
+
+.btndelete {
+    font-size: 1rem;
+    color: #757575;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.btndelete:hover {
+    color: #ff007a;
 }
